@@ -200,7 +200,7 @@ public class ContentServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 		}
 		
-		PostBean<Reply> postBean=pageService.getPostPageBean(id, pageCode, 10);
+		PostBean<Reply> postBean=pageService.getPostPageBean(id, pageCode, 5);
 		request.setAttribute("postBean", postBean);		
 		request.getRequestDispatcher("/content/post.jsp").forward(request, response);
 	}

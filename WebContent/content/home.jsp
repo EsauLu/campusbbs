@@ -185,10 +185,12 @@ function ch_time()
 							
 							<c:forEach var="post" items="${ homeBean.hostPosts }">
 							
-								<div class="postItem" style="padding:0px 10px;" onmouseover="mOver(this)" onmouseout="mOut(this)" >
+								<div class="postItem" style="padding:0px 10px; overflow: hidden;text-overflow:ellipsis; " onmouseover="mOver(this)" onmouseout="mOut(this)" >
 								
 									<a href="${ pageContext.request.contextPath }/ContentServlet?op=post&postId=${ post.postId }">
-										<span style="line-height: 29px;">${ post.postTitle }</span>
+										<span style="line-height: 29px; overflow: hidden;white-space:nowrap;text-overflow:ellipsis; ">
+										${ post.postTitle }
+										</span>
 									</a>
 								
 								</div>
