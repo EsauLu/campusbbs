@@ -32,6 +32,66 @@ E-R图中有实体：用户，用户信息，账号邮箱服务器，版块，�
 * 回复(回复ID,内容，回复时间，帖子ID, 用户名)
 * 系统管理员(管理员账号名，密码)
 
+bbs_user表
+字段	数据类型	说明
+userName	varchar(32)	用户名(主键)
+passwd	varchar(64)	密码
+
+user_info表
+字段	数据类型	说明
+userName	varchar(32)	用户名(主键) （bbs_user外键）
+nickName	varchar(32)	昵称
+head	varchar(64)	头像路径
+emailAccount	varchar(64)	邮箱
+emailServerId	Int(11)	邮箱所属的邮件服务器，外键
+
+club表
+字段	数据类型	说明
+clubName	varchar(32)	板块名（主键）
+clubIcon	varchar(64)	图标
+clubDescribe	varchar(256)	版块描述
+clubTypeId	int(11)	帖子类型（club_type外键）
+
+club_admin表
+字段	数据类型	说明
+userName	varchar(32)	用户名(主键) （bbs_user外键）
+clubName	varchar(32)	版块名(主键) （club外键）
+
+post表
+字段	数据类型	说明
+postId	int(11)	帖子ID(主键)
+postTitle	varchar(80)	帖子标题
+postContent	varchar(2048)	帖子内容
+postTime	timestamp	发帖时间
+lastTime	timestamp	最后回复的时间
+userName	varchar(32)	用户名（bbs_user外键）
+clubName	varchar(32)	版块名（club外键）
+postTypeId	int(11)	帖子类型id（post_type外键)
+
+reply表
+字段	数据类型	说明
+replyId	int(11)	回复id(主键)
+replyContent	varchar(512)	回复内容
+replyTime	timestamp	回复时间
+postId	int(11)	帖子id（post外键）
+userName	varchar(32)	用户名（bbs_user外键）
+
+club_type表
+字段	数据类型	说明
+clubTypeId	int(11)	板块类型id（主键）
+clubType	varchar(64)	板块类型
+
+post_type表
+字段	数据类型	说明
+postTypeId	int(11)	帖子类型id（主键）
+postType	varchar(64)	帖子类型名
+color	varchar(16)	标题颜色
+
+system_admin表
+字段	数据类型	说明
+postTypeId	int(11)	帖子类型id（主键）
+postType	varchar(64)	帖子类型名
+color	varchar(16)	标题颜色
 
 
 ##最终效果请参考http://www.esaulu.cn/bbs
