@@ -117,20 +117,72 @@ club表<br>
 </table>
 
 club_admin表<br>
-字段	数据类型	说明<br>
-userName	varchar(32)	用户名(主键) （bbs_user外键）<br>
-clubName	varchar(32)	版块名(主键) （club外键）<br>
+<table>
+    <tr>
+    <td><span>字段</span></td>
+    <td><span>数据类型</span></td>
+    <td><span>说明</span></td>
+    </tr>
+    <tr>
+    <td><span>userName</span></td>
+    <td><span>varchar(32)</span></td>
+    <td><span>用户名(主键)<br>（bbs_user外键）</span></td>
+    </tr>
+    <tr>
+    <td><span>clubName</span></td>
+    <td><span>varchar(32)</span></td>
+    <td><span>版块名(主键) （club外键）</span></td>
+    </tr>
+</table>
 
 post表<br>
-字段	数据类型	说明<br>
-postId	int(11)	帖子ID(主键)<br>
-postTitle	varchar(80)	帖子标题<br>
-postContent	varchar(2048)	帖子内容<br>
-postTime	timestamp	发帖时间<br>
-lastTime	timestamp	最后回复的时间<br>
-userName	varchar(32)	用户名（bbs_user外键）<br>
-clubName	varchar(32)	版块名（club外键）<br>
-postTypeId	int(11)	帖子类型id（post_type外键)<br>
+<table>
+    <tr>
+    <td><span>字段</span></td>
+    <td><span>数据类型</span></td>
+    <td><span>说明</span></td>
+    </tr>
+    <tr>
+    <td><span>postId</span></td>
+    <td><span>int(11)</span></td>
+    <td><span>帖子ID(主键)</span></td>
+    </tr>
+    <tr>
+    <td><span>postTitle</span></td>
+    <td><span>varchar(80)</span></td>
+    <td><span>帖子标题</span></td>
+    </tr>
+    <tr>
+    <td><span>postContent</span></td>
+    <td><span>varchar(2048)</span></td>
+    <td><span>帖子内容</span></td>
+    </tr>
+    <tr>
+    <td><span>postTime</span></td>
+    <td><span>timestamp</span></td>
+    <td><span>发帖时间</span></td>
+    </tr>
+    <tr>
+    <td><span>lastTime</span></td>
+    <td><span>timestamp</span></td>
+    <td><span>最后回复的时间</span></td>
+    </tr>
+    <tr>
+    <td><span>userName</span></td>
+    <td><span>varchar(32)</span></td>
+    <td><span>用户名（bbs_user外键）</span></td>
+    </tr>
+    <tr>
+    <td><span>clubName</span></td>
+    <td><span>varchar(32)</span></td>
+    <td><span>版块名（club外键）</span></td>
+    </tr>
+    <tr>
+    <td><span>postTypeId</span></td>
+    <td><span>int(11)</span></td>
+    <td><span>帖子类型id（post_type外键)</span></td>
+    </tr>
+</table>
 
 reply表<br>
 字段	数据类型	说明<br>
