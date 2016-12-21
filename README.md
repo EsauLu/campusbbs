@@ -185,29 +185,82 @@ post表<br>
 </table>
 
 reply表<br>
-字段	数据类型	说明<br>
-replyId	int(11)	回复id(主键)<br>
-replyContent	varchar(512)	回复内容<br>
-replyTime	timestamp	回复时间<br>
-postId	int(11)	帖子id（post外键）<br>
-userName	varchar(32)	用户名（bbs_user外键）<br>
+<table>
+    <tr>
+    <td><span>字段</span></td>
+    <td><span>数据类型</span></td>
+    <td><span>说明</span></td>
+    </tr>
+    <tr>
+    <td><span>replyId</span></td>
+    <td><span>int(11)</span></td>
+    <td><span>回复id(主键)</span></td>
+    </tr>
+    <tr>
+    <td><span>replyContent</span></td>
+    <td><span>varchar(512)</span></td>
+    <td><span>回复内容</span></td>
+    </tr>
+    <tr>
+    <td><span>replyTime</span></td>
+    <td><span>timestamp</span></td>
+    <td><span>回复时间</span></td>
+    </tr>
+    <tr>
+    <td><span>postId</span></td>
+    <td><span>int(11)</span></td>
+    <td><span>帖子id（post外键）</span></td>
+    </tr>
+    <tr>
+    <td><span>userName</span></td>
+    <td><span>varchar(32)</span></td>
+    <td><span>用户名（bbs_user外键）</span></td>
+    </tr>
+</table>
 
 club_type表<br>
-字段	数据类型	说明<br>
-clubTypeId	int(11)	板块类型id（主键）<br>
-clubType	varchar(64)	板块类型<br>
+<table>
+    <tr>
+    <td><span>字段</span></td>
+    <td><span>数据类型</span></td>
+    <td><span>说明</span></td>
+    </tr>
+    <tr>
+    <td><span>clubTypeId</span></td>
+    <td><span>int(11)</span></td>
+    <td><span>板块类型id（主键）</span></td>
+    </tr>
+    <tr>
+    <td><span>clubType</span></td>
+    <td><span>varchar(64)</span></td>
+    <td><span>板块类型</span></td>
+    </tr>
+</table>
 
 post_type表<br>
-字段	数据类型	说明<br>
-postTypeId	int(11)	帖子类型id（主键）<br>
-postType	varchar(64)	帖子类型名<br>
-color	varchar(16)	标题颜色<br>
+<table>
+    <tr>
+    <td><span>字段</span></td>
+    <td><span>数据类型</span></td>
+    <td><span>说明</span></td>
+    </tr>
+    <tr>
+    <td><span>postTypeId</span></td>
+    <td><span>int(11)</span></td>
+    <td><span>帖子类型id（主键）</span></td>
+    </tr>
+    <tr>
+    <td><span>postType</span></td>
+    <td><span>varchar(64)</span></td>
+    <td><span>帖子类型名</span></td>
+    </tr>
+    <tr>
+    <td><span>color</span></td>
+    <td><span>varchar(16)</span></td>
+    <td><span>标题颜色</span></td>
+    </tr>
+</table>
 
-system_admin表<br>
-字段	数据类型	说明<br>
-postTypeId	int(11)	帖子类型id（主键）<br>
-postType	varchar(64)	帖子类型名<br>
-color	varchar(16)	标题颜色<br>
 
 
 ##最终效果请参考http://www.esaulu.cn/bbs
