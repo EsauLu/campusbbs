@@ -35,6 +35,23 @@ E-R图中有实体：用户，用户信息，账号邮箱服务器，版块，�
 ###1.4.2 物理结构设计
 
 bbs_user表<br>
+<table>
+    <tr>
+    <td><span>字段</span></td>
+    <td><span>数据类型</span></td>
+    <td><span>说明</span></td>
+    </tr>
+    <tr>
+    <td><span>userName</span></td>
+    <td><span>varchar(32)</span></td>
+    <td><span>用户名(主键)</span></td>
+    </tr>
+    <tr>
+    <td><span>passwd</span></td>
+    <td><span>archar(64)</span></td>
+    <td><span>密码</span></td>
+    </tr>
+</table>
 字段	数据类型	说明<br>
 userName	varchar(32)	用户名(主键)<br>
 passwd	varchar(64)	密码<br>
