@@ -48,28 +48,73 @@ bbs_user表<br>
     </tr>
     <tr>
     <td><span>passwd</span></td>
-    <td><span>archar(64)</span></td>
+    <td><span>varchar(64)</span></td>
     <td><span>密码</span></td>
     </tr>
 </table>
-字段	数据类型	说明<br>
-userName	varchar(32)	用户名(主键)<br>
-passwd	varchar(64)	密码<br>
 
 user_info表<br>
-字段	数据类型	说明<br>
-userName	varchar(32)	用户名(主键) （bbs_user外键）<br>
-nickName	varchar(32)	昵称<br>
-head	varchar(64)	头像路径<br>
-emailAccount	varchar(64)	邮箱<br>
-emailServerId	Int(11)	邮箱所属的邮件服务器，外键<br>
+<table>
+    <tr>
+    <td><span>字段</span></td>
+    <td><span>数据类型</span></td>
+    <td><span>说明</span></td>
+    </tr>
+    <tr>
+    <td><span>userName</span></td>
+    <td><span>varchar(32)</span></td>
+    <td><span>用户名(主键)<br>（bbs_user外键）</span></td>
+    </tr>
+    <tr>
+    <td><span>nickName</span></td>
+    <td><span>varchar(32)</span></td>
+    <td><span>昵称</span></td>
+    </tr>
+    <tr>
+    <td><span>head</span></td>
+    <td><span>varchar(64)</span></td>
+    <td><span>头像路径</span></td>
+    </tr>
+    <tr>
+    <td><span>emailAccount</span></td>
+    <td><span>varchar(64)</span></td>
+    <td><span>邮箱</span></td>
+    </tr>
+    <tr>
+    <td><span>emailServerId</span></td>
+    <td><span>Int(11)</span></td>
+    <td><span>邮箱所属的邮件服务器，外键</span></td>
+    </tr>
+</table>
 
 club表<br>
-字段	数据类型	说明<br>
-clubName	varchar(32)	板块名（主键）<br>
-clubIcon	varchar(64)	图标<br>
-clubDescribe	varchar(256)	版块描述<br>
-clubTypeId	int(11)	帖子类型（club_type外键）<br>
+<table>
+    <tr>
+    <td><span>字段</span></td>
+    <td><span>数据类型</span></td>
+    <td><span>说明</span></td>
+    </tr>
+    <tr>
+    <td><span>clubName</span></td>
+    <td><span>varchar(32)</span></td>
+    <td><span>板块名（主键）</span></td>
+    </tr>
+    <tr>
+    <td><span>clubIcon</span></td>
+    <td><span>varchar(64)</span></td>
+    <td><span>图标</span></td>
+    </tr>
+    <tr>
+    <td><span>clubDescribe</span></td>
+    <td><span>varchar(256)</span></td>
+    <td><span>版块描述</span></td>
+    </tr>
+    <tr>
+    <td><span>clubTypeId</span></td>
+    <td><span>int(11)</span></td>
+    <td><span>帖子类型（club_type外键）</span></td>
+    </tr>
+</table>
 
 club_admin表<br>
 字段	数据类型	说明<br>
