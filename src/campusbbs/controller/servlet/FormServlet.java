@@ -292,7 +292,6 @@ public class FormServlet extends HttpServlet {
 		userService.deletePost(id);
 
 		String userName=request.getParameter("userName");
-		System.out.println("+-+-+-用户删除操作+-+-+-:"+userName);
 		if(userName!=null){
 			request.getRequestDispatcher("/ContentServlet?op=userSetting&"+request.getQueryString()).forward(request, response);
 			return;

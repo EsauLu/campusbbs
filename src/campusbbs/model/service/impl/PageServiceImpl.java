@@ -33,12 +33,12 @@ import campusbbs.model.vo.UserInfo;
 
 public class PageServiceImpl implements PageService {
 
-	private UserDAO userDAO=DAOFactory.getDAOInstance("userDAO", UserDAO.class);
-	private PostDAO postDAO=DAOFactory.getDAOInstance("postDAO", PostDAO.class);
-	private ClubDAO clubDAO=DAOFactory.getDAOInstance("clubDAO", ClubDAO.class);
-	private ReplyDAO replyDAO=DAOFactory.getDAOInstance("replyDAO", ReplyDAO.class);
-	private AdminDAO adminDAO=DAOFactory.getDAOInstance("adminDAO", AdminDAO.class);
-	private MailDAO mailDAO=DAOFactory.getDAOInstance("mailDAO", MailDAO.class);
+	private UserDAO userDAO = DAOFactory.getDAOInstance("userDAO", UserDAO.class);
+	private PostDAO postDAO = DAOFactory.getDAOInstance("postDAO", PostDAO.class);
+	private ClubDAO clubDAO = DAOFactory.getDAOInstance("clubDAO", ClubDAO.class);
+	private ReplyDAO replyDAO = DAOFactory.getDAOInstance("replyDAO", ReplyDAO.class);
+	private AdminDAO adminDAO = DAOFactory.getDAOInstance("adminDAO", AdminDAO.class);
+	private MailDAO mailDAO = DAOFactory.getDAOInstance("mailDAO", MailDAO.class);
 
 	@Override
 	public LastPostBean<Post> getLastPostBean(int pageCode, int size) {

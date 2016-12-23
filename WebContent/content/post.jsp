@@ -313,7 +313,7 @@ function mOut(obj){
 							
 							<c:choose>
 							
-								<c:when test="${ clubBean.pageNum>7 }">
+								<c:when test="${ postBean.pageNum>7 }">
 							
 									<c:set var="begin" value="${ postBean.pageCode-3 }"></c:set>
 									<c:set var="end" value="${ postBean.pageCode+3 }"></c:set>

@@ -6,8 +6,7 @@ import campusbbs.model.utils.FactoryUtils;
 
 public class BeanFactory{
 	
-	private static ResourceBundle bundle=ResourceBundle.getBundle("bean");
-	
+	private static ResourceBundle bundle=ResourceBundle.getBundle("bean");	
 	
 	@SuppressWarnings("unchecked")
 	public static <T> T getServiceInstance(String key,Class<T> classObj){

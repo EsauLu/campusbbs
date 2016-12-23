@@ -17,27 +17,27 @@ public interface UserDAO {
 	 * 添加用户
 	 * @param user 用户
 	 */
-	public void saveUser(User user);
+	public boolean saveUser(User user);
 	
 	/**
 	 * 删除用户
 	 * @param userName 用户名
 	 */
-	public void deleteUser(String userName);
+	public boolean deleteUser(String userName);
 	
 	/**
 	 * 更新用户
 	 * @param userName 用户名
 	 * @param passwd 用户
 	 */
-	public void updatePasswd(String userName,String passwd);
+	public boolean updatePasswd(String userName,String passwd);
 	
 	/**
 	 * 更新用户信息
 	 * @param userName 用户名
 	 * @param info 用户信息
 	 */
-	public void updateUserInfo(UserInfo info);
+	public boolean updateUserInfo(UserInfo info);
 	
 	/**
 	 * 根据用户名查找用户

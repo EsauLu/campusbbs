@@ -11,10 +11,14 @@ import campusbbs.model.vo.UserInfo;
 
 public class UserDAOImpl implements UserDAO {
 	@Override
-	public void saveUser(User user) {
+	public boolean saveUser(User user) {
 		// TODO Auto-generated method stub
 		
 		UserInfo info=user.getUserInfo();
+		
+		if(findUserByName(user.getUserName())!=null){
+			return false;
+		}
 
 		String sql="insert into bbs_user value("
 					+"\""+user.getUserName()+"\","
@@ -28,29 +32,49 @@ public class UserDAOImpl implements UserDAO {
 						+"\""+info.getHead()+"\","
 								+"\""+info.getEmailAccount()+"\","
 										+"\""+info.getEmailServerId()+"\")"
-								+ ";";	
+								+ ";";
 
 		SQLUtils.updateRecord(sql);
+		
+		return true;
 		
 	}
 
 	@Override
-	public void deleteUser(String userName) {
+	public boolean deleteUser(String userName) {
 		// TODO Auto-generated method stub	
+
+		if(findUserByName(userName)==null){
+			return false;
+		}
+		
 		String sql="delete from bbs_user where userName=\""+userName+"\";";	
 		SQLUtils.updateRecord(sql);
+		return true;
+		
 	}
 
 	@Override
-	public void updatePasswd(String userName, String passwd) {
+	public boolean updatePasswd(String userName, String passwd) {
 		// TODO Auto-generated method stub
+		
+		if(findUserByName(userName)==null){
+			return false;
+		}
+		
 		String sql="update bbs_user set passwd=\""+passwd+"\" where userName=\""+userName+"\";";
 		SQLUtils.updateRecord(sql);
+		
+		return true;
 	}
 	
 	@Override
-	public void updateUserInfo(UserInfo info) {
+	public boolean updateUserInfo(UserInfo info) {
 		// TODO Auto-generated method stub
+		
+		if(findUserByName(info.getUserName())==null){
+			return false;
+		}
 		
 		String sql="update user_info set ";
 		int c=0;
@@ -87,6 +111,8 @@ public class UserDAOImpl implements UserDAO {
 
 		SQLUtils.updateRecord(sql,arr.toArray());
 
+		return true;
+		
 	}
 
 	@Override

@@ -59,7 +59,12 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userName=" + userName + ", passwd=" + passwd + ", userInfo=" + userInfo.toString() + "]";
+		String to="User [userName=" + userName + ", passwd=" + passwd;
+		if(userInfo!=null){
+			to+=", userInfo="+userInfo.toString() + "]";
+		}
+		to+="]";
+		return to;
 	}
 	
 	

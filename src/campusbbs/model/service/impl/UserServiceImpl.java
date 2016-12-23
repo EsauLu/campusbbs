@@ -16,11 +16,28 @@ import campusbbs.model.vo.UserInfo;
 public class UserServiceImpl implements UserService{
 	
 	private String errorMessage="";
-	private UserDAO userDAO=DAOFactory.getDAOInstance("userDAO", UserDAO.class);
-	private PostDAO postDAO=DAOFactory.getDAOInstance("postDAO", PostDAO.class);
-	private ReplyDAO replyDAO=DAOFactory.getDAOInstance("replyDAO", ReplyDAO.class);
-	private AdminDAO adminDAO=DAOFactory.getDAOInstance("adminDAO", AdminDAO.class);
-	private ClubDAO clubDAO=DAOFactory.getDAOInstance("clubDAO", ClubDAO.class);
+	private UserDAO userDAO;
+	private PostDAO postDAO;
+	private ReplyDAO replyDAO;
+	private AdminDAO adminDAO;
+	private ClubDAO clubDAO;
+	
+
+	public UserServiceImpl() {
+		super();
+		// TODO Auto-generated constructor stub
+		errorMessage="";
+		userDAO = DAOFactory.getDAOInstance("userDAO", UserDAO.class);
+		postDAO = DAOFactory.getDAOInstance("postDAO", PostDAO.class);
+		replyDAO = DAOFactory.getDAOInstance("replyDAO", ReplyDAO.class);
+		adminDAO = DAOFactory.getDAOInstance("adminDAO", AdminDAO.class);
+		clubDAO = DAOFactory.getDAOInstance("clubDAO", ClubDAO.class);
+	}
+ 
+	public UserServiceImpl(UserDAO userDAO) {
+		super();
+		this.userDAO = userDAO;
+	}
 
 	@Override
 	public User login(User user) {
@@ -222,9 +239,7 @@ public class UserServiceImpl implements UserService{
 	public void deleteReply(int id) {
 		// TODO Auto-generated method stub
 		replyDAO.deleteReplyById(id);
-	}
-	
-	
+	}	
 
 }
 

@@ -1,12 +1,31 @@
 <c3p0-config>
+	<!-- 
+	<default-config>
+	
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://119.29.225.64:3306/campusbbs?characterEncoding=utf8</property>
+		<property name="user">root</property>
+		<property name="password">a1234567</property>
+		<property name="initialPoolSize">10</property>
+		<property name="maxPoolSize">45</property>
+
+	</default-config>
+	-->
+	 
+	
 	<default-config>
 	
 		<property name="driverClass">com.mysql.jdbc.Driver</property>
 		<property name="jdbcUrl">jdbc:mysql:///campusbbs?characterEncoding=utf8</property>
 		<property name="user">root</property>
 		<property name="password">root</property>
-		<property name="initialPoolSize">5</property>
-		<property name="maxPoolSize">10</property>
+		<property name="initialPoolSize">50</property>
+		<property name="maxPoolSize">60</property>
 
 	</default-config>
+	 
+	 
+	<!-- 119.29.225.64 -->
 </c3p0-config>
+
+
